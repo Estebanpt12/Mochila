@@ -5,13 +5,10 @@ import problemaMochila.Mochila;
 
 public class App {
     public static void main(String[] args) {
-        String s = null;
-        System.out.println(s.length());
-
         Elemento[] elementos = {
             new Elemento(3, 2),
             new Elemento(2, 2),
-            new Elemento(2, 4)
+            new Elemento(4, 2)
         };
 
         Mochila m_base = new Mochila(5, elementos.length);
@@ -39,7 +36,7 @@ public class App {
         } else {
             //Recorre los elementos
             for (int i = 0; i < elementos.length; i++) {
-                //si existe el elemento
+                //si no existe el elemento
                 if (!m_base.existeElemento(elementos[i])) {
                     //Si el peso de la mochila se supera, indicamos que esta llena
                     if (m_base.getPesoMaximo() >= m_base.getPeso() + elementos[i].getPeso()) {

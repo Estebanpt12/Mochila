@@ -5,7 +5,9 @@ public class Mochila {
     private int pesoMaximo;
     private Elemento[] elementos;
 
+    //Peso actual
     private int peso;
+    //Beneficio actual
     private int beneficio;
 
     public Mochila(int pesoMaximo, int numElementos) {
